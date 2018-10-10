@@ -2,7 +2,9 @@ import logging
 import logstash
 import sys
 import time
+#import logging.handlers
 
+#from logstashHandler import logstashHandler
 
 test_logger = logging.getLogger('python-logstash-logger')
 test_logger.setLevel(logging.INFO)
@@ -20,5 +22,6 @@ extra = {
     'test_float': 1.23,
     'test_integer': 123,
     'test_list': [1, 2, '3'],
+    
 }
 test_logger.info('python-logstash: test extra fields', extra=extra)
